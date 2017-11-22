@@ -1,0 +1,44 @@
+service: alexa-skills-test
+
+provider:
+  name: aws
+  stage: dev
+  runtime: nodejs6.10
+functions:
+  hello:
+    handler: handler.hello
+plugins:
+  - serverless-alexa-skills
+
+custom:
+  alexa:
+    vendorId: ${env:AMAZON_VENDOR_ID}
+    clientId: ${env:AMAZON_CLIENT_ID}
+    clientSecret: ${env:AMAZON_CLIENT_SECRET}
+    skills:
+      - id: ${env:ALEXA_SKILL_ID}
+        skillManifest:
+          publishingInformation:
+            locales:
+              ja-JP:
+                name: test2
+          apis:
+            custom: {}
+          manifestVersion: '1.0'
+        models:
+          ja-JP:
+            interactionModel:
+              languageModel:
+                invocationName: hello
+                intents:
+                  - name: AMAZON.CancelIntent
+                    samples: []
+                  - name: AMAZON.HelpIntent
+                    samples: []
+                  - name: AMAZON.StopIntent
+                    samples: []
+                  - name: HelloWorldIntent
+                    samples:
+                    - hello
+                    - say hello
+                    - hello world

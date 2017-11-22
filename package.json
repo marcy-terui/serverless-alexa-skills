@@ -1,0 +1,52 @@
+{
+  "name": "serverless-alexa-skills",
+  "version": "0.0.1",
+  "description": "Manage your Alexa Skills with Serverless Framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "istanbul cover ./node_modules/mocha/bin/_mocha",
+    "lint": "./node_modules/.bin/eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcy-terui/serverless-alexa-skills.git"
+  },
+  "keywords": [
+    "serverless",
+    "alexa",
+    "ask",
+    "amazon"
+  ],
+  "author": "Masashi Terui",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marcy-terui/serverless-alexa-skills/issues"
+  },
+  "homepage": "https://github.com/marcy-terui/serverless-alexa-skills#readme",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "deep-diff": "^0.3.8",
+    "fs-extra": "^4.0.2",
+    "js-yaml": "^3.10.0",
+    "opn": "^5.1.0",
+    "querystring": "^0.2.0",
+    "request-promise": "^4.2.2",
+    "simple-oauth2": "^1.4.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "coveralls": "^3.0.0",
+    "eslint": "^4.11.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^4.0.1",
+    "mocha-lcov-reporter": "^1.3.0",
+    "serverless": "^1.24.1",
+    "sinon": "^4.1.2",
+    "tap": "^10.7.3"
+  }
+}
