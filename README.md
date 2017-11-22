@@ -19,9 +19,9 @@ npm install serverless-alexa-skills --save
 
 # Setup
 
-##### First, you need to create a ["Security Profile"](https://developer.amazon.com/docs/login-with-amazon/security-profile.html) and configure ["Login with Amazon"](https://developer.amazon.com/ja/docs/login-with-amazon/web-docs.html).
+#### First, you need to create a ["Security Profile"](https://developer.amazon.com/docs/login-with-amazon/security-profile.html) and configure ["Login with Amazon"](https://developer.amazon.com/ja/docs/login-with-amazon/web-docs.html).
 
-##### Next, Check your Client ID, Client Secret, [Vendor ID](https://developer.amazon.com/mycid.html) at [Amazon developer console](https://developer.amazon.com/home.html)
+#### Next, Check your Client ID, Client Secret and [Vendor ID](https://developer.amazon.com/mycid.html) at [Amazon developer console](https://developer.amazon.com/home.html).
 
 # Configuration
 
