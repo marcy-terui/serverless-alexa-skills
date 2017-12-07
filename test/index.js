@@ -26,6 +26,23 @@ describe('AlexaSkills', () => {
     it('should set the provider variable to an instance of AwsProvider', () =>
       expect(alexaSkills.provider).to.be.instanceof(AwsProvider));
 
+      it('should run promise chain in order for before:package:createDeploymentArtifacts', () => {
+        const initializeStub = sinon
+          .stub(alexaSkills, 'initialize').returns(BbPromise.resolve());
+
+        const excludeTokenFileStub = sinon
+          .stub(alexaSkills, 'excludeTokenFile').returns(BbPromise.resolve());
+
+        return alexaSkills.hooks['before:package:createDeploymentArtifacts']().then(() => {
+          expect(initializeStub.calledOnce).to.equal(true);
+          expect(excludeTokenFileStub.calledAfter(initializeStub))
+            .to.equal(true);
+
+          alexaSkills.initialize.restore();
+          alexaSkills.excludeTokenFile.restore();
+        });
+      });
+
     it('should run promise chain in order for alexa:auth:auth', () => {
       const initializeStub = sinon
         .stub(alexaSkills, 'initialize').returns(BbPromise.resolve());
