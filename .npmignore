@@ -1,3 +1,5 @@
 # Serverless directories
 .serverless
+
 .envrc
+tests
