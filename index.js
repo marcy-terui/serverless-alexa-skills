@@ -20,12 +20,15 @@ const diffModels = require('./lib/diffModels');
 const outputModelsDiff = require('./lib/outputModelsDiff');
 const updateModels = require('./lib/updateModels');
 const outputUpdatedModels = require('./lib/outputUpdatedModels');
+const excludeTokenFile = require('./lib/excludeTokenFile');
+
 
 class AlexaSkills {
   constructor(serverless, options) {
     this.serverless = serverless;
     this.options = options || {};
     this.provider = this.serverless.getProvider('aws');
+    this.TOKEN_FILE_NAME = '.alexa-skills-token.json';
 
     Object.assign(
       this,
@@ -46,7 +49,8 @@ class AlexaSkills {
       diffModels,
       outputModelsDiff,
       updateModels,
-      outputUpdatedModels
+      outputUpdatedModels,
+      excludeTokenFile
     );
 
     this.commands = {
@@ -135,6 +139,9 @@ class AlexaSkills {
     };
 
     this.hooks = {
+      'before:package:createDeploymentArtifacts': () => BbPromise.bind(this)
+        .then(this.initialize)
+        .then(this.excludeTokenFile),
       'alexa:auth:auth': () => BbPromise.bind(this)
         .then(this.initialize)
         .then(this.createHttpServer)
