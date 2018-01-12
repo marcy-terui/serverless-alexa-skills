@@ -30,6 +30,8 @@ npm install serverless-alexa-skills
 
 #### Next, Check your Client ID, Client Secret and [Vendor ID](https://developer.amazon.com/mycid.html) at [Amazon developer console](https://developer.amazon.com/home.html).
 
+See: [the step-by-step guide](https://github.com/marcy-terui/serverless-alexa-skills/wiki/How-to-get-your-%22Login-with-Amazon%22-credentials)
+
 # Configuration
 
 ### serverless.yml
@@ -151,6 +153,9 @@ Plugin: AlexaSkills
 alexa build ................... Update and buid your Alexa Interaction Models
     --dryRun / -d ...................... Dry run (Only output the diff)
 ```
+
+# How to use
+See: [the post of Serverless Blog](https://serverless.com/blog/how-to-manage-your-alexa-skills-with-serverless/)
 
 
 Development
