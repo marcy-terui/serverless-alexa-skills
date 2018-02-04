@@ -15,7 +15,7 @@ Manage your Alexa Skills with Serverless Framework.
 # Installation
 
 ```sh
-serverless plugin install serverless-alexa-skills
+serverless plugin install --name serverless-alexa-skills
 ```
 
 or
