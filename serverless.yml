@@ -17,11 +17,11 @@ custom:
     clientSecret: ${env:AMAZON_CLIENT_SECRET}
     skills:
       - id: ${env:ALEXA_SKILL_ID}
-        skillManifest:
+        manifest:
           publishingInformation:
             locales:
               ja-JP:
-                name: test2
+                name: test3
           apis:
             custom: {}
           manifestVersion: '1.0'
@@ -42,3 +42,4 @@ custom:
                     - hello
                     - say hello
                     - hello world
+                    - hello my world

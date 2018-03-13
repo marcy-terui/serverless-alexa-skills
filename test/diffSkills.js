@@ -12,11 +12,11 @@ describe('diffSkills()', () => {
   it('should return diff if it has the same ID', () => {
     let localSkills = [{
       id: 'foo',
-      skillManifest: { foo: 'bar' }
+      manifest: { foo: 'bar' }
     }]
     let remoteSkills = [{
       skillId: 'foo',
-      skillManifest: { foo: 'buz' }
+      manifest: { foo: 'buz' }
     }]
 
     diffSkills.serverless.service.custom.alexa.skills = localSkills;
@@ -28,11 +28,11 @@ describe('diffSkills()', () => {
   it('should not return diff if it has not the same ID', () => {
     let localSkills = [{
       id: 'foo',
-      skillManifest: { foo: 'bar' }
+      manifest: { foo: 'bar' }
     }]
     let remoteSkills = [{
       skillId: 'bar',
-      skillManifest: { foo: 'buz' }
+      manifest: { foo: 'buz' }
     }]
 
     diffSkills.serverless.service.custom.alexa.skills = localSkills;
