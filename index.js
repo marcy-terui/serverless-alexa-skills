@@ -5,6 +5,7 @@ const BbPromise = require('bluebird');
 const initialize = require('./lib/initialize');
 const createHttpServer = require('./lib/createHttpServer');
 const openAuthorizationUri = require('./lib/openAuthorizationUri');
+const getVendorId = require('./lib/getVendorId');
 const getRemoteSkills = require('./lib/getRemoteSkills');
 const outputSkills = require('./lib/outputSkills');
 const createSkill = require('./lib/createSkill');
@@ -35,6 +36,7 @@ class AlexaSkills {
       initialize,
       createHttpServer,
       openAuthorizationUri,
+      getVendorId,
       getRemoteSkills,
       outputSkills,
       createSkill,
