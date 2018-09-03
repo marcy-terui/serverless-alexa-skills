@@ -12,9 +12,9 @@ plugins:
 
 custom:
   alexa:
-    vendorId: ${env:AMAZON_VENDOR_ID}
-    clientId: ${env:AMAZON_CLIENT_ID}
-    clientSecret: ${env:AMAZON_CLIENT_SECRET}
+#    vendorId: ${env:AMAZON_VENDOR_ID}
+#    clientId: ${env:AMAZON_CLIENT_ID}
+#    clientSecret: ${env:AMAZON_CLIENT_SECRET}
     skills:
       - id: ${env:ALEXA_SKILL_ID}
         manifest:
