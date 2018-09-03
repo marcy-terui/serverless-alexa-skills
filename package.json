@@ -1,6 +1,6 @@
 {
   "name": "serverless-alexa-skills",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "description": "Manage your Alexa Skills with Serverless Framework",
   "main": "index.js",
   "scripts": {
