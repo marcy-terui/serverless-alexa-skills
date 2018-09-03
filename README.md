@@ -77,9 +77,9 @@ custom:
 ## alexa auth
 Authenticate with Amazon OAuth2.
 
-### Caution
-- **The security token expires in `1 hour`. If an authentication error occurs, please execute this command again.**
-- This command creates a local web server to receive OAuth2 authentication redirects. The default port is `3000`. If you want to change the port, please change `custom.alexa.localServerPort` setting.
+- This command creates a local web server to receive OAuth2 authentication redirects. The default port is `9090`. If you want to change the port, please change `custom.alexa.localServerPort` setting.
+
+**Note: You must use the 9090 port if use the default security profile. If you want to use another port number, you have to create a custom security profile with "http://127.0.0.0:$YOUR_PORT_NUMBER/cb" as Allow Return URLs.**
 
 ```shell
 $ serverless alexa auth -h
