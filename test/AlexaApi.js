@@ -9,13 +9,13 @@ describe('AlexaApi', () => {
   let alexaApi;
 
   beforeEach(() => {
-    alexaApi = new AlexaApi('token');
+    alexaApi = new AlexaApi({ expired: () => false, token: { access_token: 'token' } });
   });
 
   describe('#constructor()', () => {
 
     it('should have Authorization header', () => {
-      expect(alexaApi.headers.Authorization).to.equal('token');
+      return alexaApi.getHeaders().then(headers => expect(headers.Authorization).to.equal('token'));
     });
 
   });
