@@ -4,3 +4,4 @@
 .envrc
 tests
 .alexa-skills-token.json
+coverage/
