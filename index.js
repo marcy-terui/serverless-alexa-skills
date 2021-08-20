@@ -88,16 +88,19 @@ class AlexaSkills {
                 usage: 'Name of the skill',
                 shortcut: 'n',
                 required: true,
+                type: 'string',
               },
               locale: {
                 usage: 'First locale of the skill (e.g. "ja-JP", "en-US")',
                 shortcut: 'l',
                 required: true,
+                type: 'string',
               },
               type: {
                 usage: 'Type of the skill (e.g. "custom", "smartHome", "video")',
                 shortcut: 't',
                 required: true,
+                type: 'string',
               },
             },
           },
@@ -111,6 +114,7 @@ class AlexaSkills {
                 usage: 'Skill ID',
                 shortcut: 'i',
                 required: true,
+                type: 'string',
               },
             },
           },
@@ -123,6 +127,7 @@ class AlexaSkills {
               dryRun: {
                 usage: 'Dry run (Only output the diff)',
                 shortcut: 'd',
+                type: 'boolean',
               },
             },
           },
@@ -135,6 +140,7 @@ class AlexaSkills {
               dryRun: {
                 usage: 'Dry run (Only output the diff)',
                 shortcut: 'd',
+                type: 'boolean',
               },
             },
           },
